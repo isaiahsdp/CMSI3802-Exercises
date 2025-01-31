@@ -6,4 +6,4 @@ I, Stanley Nicholson, affirm that I have personally completed all of the require
 
 I, Matthew Martel, affirm that I have personally completed all of the required readings and watching.
 
-I, [Your Name], affirm that I have personally completed all of the required readings and watchings.
+I, Christopher Chatel, affirm that I have personally completed all of the required readings and watchings.
