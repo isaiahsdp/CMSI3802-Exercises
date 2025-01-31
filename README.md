@@ -1,3 +1,3 @@
 # CMSI3802-Exercises
 
-## Collaborators: Isaiah, Chris, Martel, Stanley
+#### Collaborators: Isaiah, Chris, Martel, Stanley
