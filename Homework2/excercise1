@@ -1,1 +1,58 @@
+import { describe, it } from "node:test"
+import assert from "assert"
+import * as ohm from "ohm-js"
 
+const grammars = {
+    canadianPostalCode: String.raw`
+      CanadianPostalCode = letter letter digit letter digit letter
+      letter = "A".."C" | "E" | "G".."H" | "J".."N" | "P" | "R".."T" | "V".."Z" | "a".."c" | "e" | "g".."h" | "j".."n" | "p" | "r".."t" | "v".."z"
+      digit = "0".."9"
+    `,
+  
+    visa: String.raw`
+      Visa = "4" digit{15} | "4" digit{12}
+      digit = "0".."9"
+    `,
+  
+    masterCard: String.raw`
+      MasterCard = ("51".."55" digit{14}) | ("2221".."2720" digit{12})
+      digit = "0".."9"
+    `,
+  
+    notThreeEndingInOO: String.raw`
+      NotThreeEndingInOO = ~(letter letter ("o" | "O") ("o" | "O")) letter*
+      letter = "a".."z" | "A".."Z"
+    `,
+  
+    divisibleBy16: String.raw`
+      DivisibleBy16 = ("0" | "1")* "0000"
+    `,
+  
+    eightThroughThirtyTwo: String.raw`
+      EightThroughThirtyTwo = "8".."9" | "1".."2" digit | "30" | "31" | "32"
+      digit = "0".."9"
+    `,
+  
+    notPythonPycharmPyc: String.raw`
+      NotPythonPycharmPyc = ~("python" | "pycharm" | "pyc") letter*
+      letter = "a".."z" | "A".."Z"
+    `,
+  
+    restrictedFloats: String.raw`
+      RestrictedFloats = digit+ ("." digit*)? ("e" | "E") ("+" | "-")? digit{1,3}
+      digit = "0".."9"
+    `,
+  
+    palindromes2358: String.raw`
+      Palindromes2358 = ("aa" | "bb" | "cc") | ("aaa" | "aba" | "aca" | "bab" | "bbb") | ("ababa" | "abcba") | ("aaaaaaaa" | "abaaaaba" | "cbcbbcbc" | "caaaaaac")
+    `,
+  
+    pythonStringLiterals: String.raw`
+      PythonStringLiterals = (singleQuoted | doubleQuoted | tripleSingleQuoted | tripleDoubleQuoted)
+      singleQuoted = "'" (~"'" any)* "'"
+      doubleQuoted = "\"" (~"\"" any)* "\""
+      tripleSingleQuoted = "'''" (~"'''" any)* "'''"
+      tripleDoubleQuoted = "\"\"\"" (~"\"\"\"" any)* "\"\"\""
+      any = .
+    `,
+  }
