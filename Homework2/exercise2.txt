@@ -1,0 +1,61 @@
+-- Function Declarations and Examples
+
+-- Function to calculate factorial of a number
+func factorial(n)
+    n!
+end
+
+-- Function to negate a number
+func negate(n)
+    -n
+end
+
+-- Function to add two numbers
+func add(a,b)
+    a + b
+end
+
+-- Function to subtract two numbers
+func subtract(a,b)
+    a - b
+end
+
+-- Function to multiply two numbers
+func multiply(a,b)
+    a * b
+end
+
+-- Function to divide two numbers
+func divide(a,b)
+    a / b
+end
+
+-- Function to demonstrate conditional
+func conditional(a)
+    1 if a else 0
+end
+
+-- Function to demonstrate precedences
+func precedences(a,b,c,d)
+    (-(a!) + ((a + b) * (b + c))) if d else a + b
+end
+
+-- Function to demonstrate >1 expression
+func _2Expression(a,b, c)
+    num = add[a, b];
+    num - c
+end
+
+-- Function to demonstrate numeral literals
+func numLiterals(a)
+    a * 1e10 + 1.1
+end
+
+-- Function to demonstrate string literals
+func phrase()
+    "Hello World\nThis is a new line. \nThis is a quote\n\"Sup\". \nHere is a single quote: \'. \nEmoji Time: \u{1F600}"
+end
+
+-- Final expression
+precedences[4, 2, 3, 1] + numLiterals[5] - factorial[3]
+-- answer: 50000000001.1
