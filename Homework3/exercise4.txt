@@ -1,0 +1,47 @@
+Some languages do not require the parameters to a function call to be evaluated in any particular order. 
+Is it possible that different evaluation orders can lead to different arguments being passed? 
+If so, give an example to illustrate this point, and if not, prove that no such event could occur.
+
+Yes, it is possible that different evaluation orders can lead to different arguments being passed.
+
+example:
+
+public class Main {
+    static int x = 1;
+
+    static int getA() {
+        x += 1;
+        return x;
+    }
+
+    static int getB() {
+        x = x * 2;
+        return x;
+    }
+
+    public static void main(String[] args) {
+        // Left-to-right evaluation
+        x = 1; 
+        f(getA(), getB()); // Output: 2, 4
+
+        // Right-to-left evaluation
+        x = 1; 
+        f(getB(), getA()); // Output: 2, 3
+    }
+}
+
+Left to right explanation:
+- getA() runs first
+    - increments x by 1 -> x = 2
+    - returns 2 (passed to f)
+- getB() runs second
+    - multiplies x by 2 -> x = 4
+    - returns 4 (passed to f)
+
+Right to left explanation:
+- getB() runs first
+    - multiplies x by 2 -> x = 2
+    - returns 2 (passed to f)
+- getA() runs second
+    - increments x by 1 -> x = 3
+    - returns 3 (passed to f)

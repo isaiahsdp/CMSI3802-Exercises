@@ -1,0 +1,38 @@
+Classify the following as a syntax error, static semantic (contextual) error, or not a compile time error. 
+In the case where code is given, assume all identifiers are declared, have the expected type, and are in scope. 
+All items refer to the Java language.
+
+a. x+++-y (not a compile time error)
+
+b. x---+y (not a compile time error)
+
+c. incrementing a read-only variable (static semantic (contextual) error)
+attempting to modify a final variable causes compile-time error
+
+d. code in class C accessing a private field from class D (static semantic (contextual) error)
+cannot access a private field
+
+e. Using an uninitialized variable (static semantic (contextual) error)
+local variable must be initialized before use
+
+f. Dereferencing a null reference (not a compile time error)
+however, it is a runtime error
+
+g. null instanceof C (not a compile time error)
+output will always be false
+
+h. !!x (not a compile time error)
+valid only when x is a boolean
+
+i. x > y > z (static semantic (contextual) error)
+x > y returns a boolean, which cannot be compared to z
+
+j. if (a instanceof Dog d) {...} (not a compile time error)
+
+k. var s = """This is weird"""; (not a compile time error)
+text blocks
+
+l. switch = 200; (syntax error)
+switch is a reserved keyword
+
+m. x = switch (e) {case 1->5; default->8;}; (not a compile time error)

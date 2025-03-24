@@ -1,0 +1,42 @@
+Describe how the languages Java and Ruby differ in their interpretations of the meaning of the keyword private. 
+You can use an AI chatbot for help, but please trim down the long-winded applications those tools are known for, 
+and give a concise explanation that proves you truly understand the difference.
+
+Java
+- private methods and fields are only accessible within the same class
+    - you cannot access private methods through inheritance
+    - you cannot call them directly through subclasses
+
+example:
+class A {
+    private void secret() {
+        System.out.println("Secret");
+    }
+}
+
+class B extends A {
+    void accessSecret() {
+        secret(); // Compile-time error
+    }
+}
+
+Ruby
+- private methods are accessible within the same class and subclasses
+    - only implicitly (without self)
+
+example:
+ class A
+  private
+  def secret
+    puts "Secret"
+  end
+end
+
+class B < A
+  def access_secret
+    secret         # Works — implicit call allowed
+    self.secret    # Error — cannot call private method with a receiver
+  end
+end
+
+Regarding the keyword private, Java enforces stricter encapsulation, whereas Ruby allows more flexibility in the context of visibility.

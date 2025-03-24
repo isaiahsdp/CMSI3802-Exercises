@@ -1,0 +1,14 @@
+How do JavaScript and Rust treat the following:
+let x = 3;
+let x = 3;
+
+JavaScript (error)
+let x = 3;
+let x = 3; // Uncaught SyntaxError: Identifier 'x' has already been declared
+
+Rust (no error)
+fn main() {
+    let x = 3;
+    let x = 3;
+    println!("{}", x);
+} // Ouput: 3
