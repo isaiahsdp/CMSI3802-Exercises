@@ -1,0 +1,35 @@
+'''text 
+
+Python:
+
+def min_tail(arr, current_min=float('inf')):
+    if not arr:
+        return current_min
+    return min_tail(arr[1:], min(current_min, arr[0]))
+
+
+C :
+
+float min_tail(float *arr, int size, int index, float current_min) {
+    if (index == size) return current_min;
+    float new_min = arr[index] < current_min ? arr[index] : current_min;
+    return min_tail(arr, size, index + 1, new_min);
+}
+
+
+JavaScript:
+
+function minTail(arr, currentMin = Infinity) {
+    if (arr.length === 0) return currentMin;
+    return minTail(arr.slice(1), Math.min(currentMin, arr[0]));
+}
+
+
+Rust:
+
+fn min_tail(arr: &[f64], current_min: f64) -> f64 {
+    if arr.is_empty() {
+        return current_min;
+    }
+    let new_min = arr[0].min(current_min);
+    min_tail(&arr[1..], new_min)
