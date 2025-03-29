@@ -1,0 +1,10 @@
+'''text 
+I looked over the code and found a few issues:
+
+1)The class name C is too short. Should be more descriptive.
+2)The constructor is empty and not needed.
+3)zero() works but the name isn’t clear, something like getDefaultValue() would be better.
+4)The map is final but still mutable. If it’s meant to be read only, it should be wrapped with Collections.unmodifiableMap().
+5)Can use the diamond operator (<>) in new HashMap<>() to make it cleaner.
+
+I used a Java linter and just some basic code review skills to spot these.
