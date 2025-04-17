@@ -1,0 +1,20 @@
+Q4 - (V, Σ, R, S) Definition
+
+V (Variables):
+{n, f, e, d}
+
+Σ (Alphabet / terminals):
+{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "E", "e", "+", "-"}
+
+R (Production rules):
+n  → d n’
+n’ → d n’ | f n’ | e n’ | ε
+f  → "." d f’
+f’ → d f’ | ε
+e  → "E" e’ | "e" e’
+e’ → "+" d e’’ | "-" d e’’ | d e’’
+e’’ → d e’’ | ε
+d  → "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+S (Start symbol):
+n
