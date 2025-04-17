@@ -1,0 +1,25 @@
+Exercise 8. Language Classification
+
+a. {a^i b^j c^k | i > j > k}
+Answer: (c) Recursive but not context-free
+
+b. {a^i b^j c^k | i > j ∧ k ≤ i − j}
+Answer: (c) Recursive but not context-free
+
+c. {<M> · w | M accepts w}
+Answer: (d) Recursively enumerable but not recursive
+
+d. {G | G is context-free ∧ L(G) = ∅}
+Answer: (c) Recursive but not context-free
+
+e. {a^i b^j*}{b^j+}
+Answer: (a) Regular
+
+f. {<M> | M does not halt}
+Answer: (e) Not even recursively enumerable
+
+g. {w | w is a decimal numeral divisible by 7}
+Answer: (a) Regular
+
+h. {www | w is a string over the Unicode alphabet}
+Answer: (b) Context-free but not regular
