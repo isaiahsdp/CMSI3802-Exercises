@@ -1,0 +1,11 @@
+Exercise 2
+Set Operations
+Let L₁ = {0, 011, 10} and L₂ = {10, 1}
+
+a. L₁ ∪ L₂ = {0, 011, 10, 1}
+
+b. L₁ ∩ L₂ = {10} 
+
+c. L₁L₂ = All combinations = {010, 01, 01110, 0111, 1010, 101}
+
+d. L₂* = All strings made from zero or more repetitions of 10 or 1: = {ε, 10, 1, 1010, 11, 101, 110, 101010, ...}
