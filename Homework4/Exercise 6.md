@@ -6,6 +6,6 @@
 
 ![Exercise6b](images/Exercise6b.png)
 
-### b. The function described in Python as lambda n: str(n)[1:-1]
+### c. The function described in Python as lambda n: str(n)[1:-1]
 
 ![Exercise6c](images/Exercise6c.png)
