@@ -1,0 +1,20 @@
+// 3a: Empty language
+S → 
+
+// 3b: {0^i 1^j 2^k | i = j ∨ j = k}
+S → A | B
+A → 0A1 | C
+B → 1B2 | C
+C → ε
+
+// 3c: No substring 000
+S → A
+A → ε | 0B | 1A
+B → ε | 0C | 1A
+C → ε | 1A
+
+// 3d: Twice as many a's as b's
+S → ε | aSaSbS | aSbSaS | bSaSaS
+
+// 3e: {a^n b^n a^n b^n} (non-CFG; unrestricted grammar shown)
+S → ε | a b a b | a S b a S b
