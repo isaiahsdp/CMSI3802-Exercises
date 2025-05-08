@@ -1,0 +1,33 @@
+WebAssembly translation with comments:
+
+f:
+        local.get       0          ;; get local variable `n`
+        i32.const       3          ;; push constant 3 onto stack
+        i32.mul                    ;; compute 3 * n
+        i32.const       1          ;; push constant 1
+        i32.add                    ;; compute (3 * n) + 1
+        local.get       0          ;; get local variable `n`
+        i32.const       1          ;; push constant 1
+        i32.shr_s                  ;; arithmetic shift right by 1
+        local.get       0          ;; get local variable `n`
+        i32.const       1          ;; push constant 1
+        i32.and                    ;; compute n % 2
+        i32.select                 ;; if (n % 2 == 0) select n / 2 else 3n + 1
+        end_function               ;; end of the function
+
+
+
+
+x86-64 translation with comments:
+
+f:
+        test    dil, 1              ; check if n is odd (n % 2 != 0)
+        jne     .L2                 ; jump to .L2 if n is odd
+        mov     eax, edi            ; copy n to eax
+        shr     eax, 31             ; shift right to adjust the sign
+        add     eax, edi            ; add n to handle rounding
+        sar     eax                 ; arithmetic right shift (n / 2)
+        ret
+.L2:
+        lea     eax, [rdi+1+rdi*2]  ; compute 3 * n + 1
+        ret
