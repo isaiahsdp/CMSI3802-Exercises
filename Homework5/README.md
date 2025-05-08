@@ -1,6 +1,6 @@
 # Affidavit
 
-I, , affirm that I have personally completed all of the required readings and watching.
+I, Isaiah Pajarillo, affirm that I have personally completed all of the required readings and watching.
 
 I, , affirm that I have personally completed all of the required readings and watchings.
 
