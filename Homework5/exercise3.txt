@@ -1,7 +1,9 @@
 Two machines can be constructed. 
-Machine 1 simulates M on w (input string), and if it accepts w, then Machine 1 accepts everything, but if it does not accept w, then Machine 1 accepts nothing. 
+Machine 1 simulates M on w (input string), and if it accepts w, then Machine 1 accepts everything, 
+but if it does not accept w, then Machine 1 accepts nothing. 
 The other machine (Machine 2) accepts nothing no matter what. 
 Machine 1 and 2 can then be compared. 
 If M accepts w, then Machine 1 accepts everything and Machine 1 does not equal Machine 2. 
 If M does not accept w, then Machine 1 and Machine 2 both accept nothing so Machine 1 is equal to Machine 2. 
-By comparing them we can figure out whether M accepts w, but that's not supposed to be possible, so the original problem must be undecidable. 
+By comparing them we can figure out whether M accepts w, but that's not supposed to be possible, 
+so the original problem must be undecidable. 
