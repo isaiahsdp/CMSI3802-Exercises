@@ -4,6 +4,6 @@ I, , affirm that I have personally completed all of the required readings and wa
 
 I, , affirm that I have personally completed all of the required readings and watchings.
 
-I, , affirm that I have personally completed all of the required readings and watching.
+I, Stanley Nicholson, affirm that I have personally completed all of the required readings and watching.
 
 I, Christopher Chatel, affirm that I have personally completed all of the required readings and watchings.
